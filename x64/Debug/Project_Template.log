@@ -1,3 +1,3 @@
-﻿  scenebasic_uniform.cpp
-C:\Users\roxer\Desktop\Project_Template\scenebasic_uniform.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\roxer\Desktop\Project_Template\scenebasic_uniform.cpp(100,25): error C2065: 'location': undeclared identifier
+﻿  main.cpp
+C:\Users\roxer\source\repos\Project_Template\scenebasic_uniform.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Project_Template.vcxproj -> C:\Users\roxer\source\repos\Project_Template\x64\Debug\Project_Template.exe
