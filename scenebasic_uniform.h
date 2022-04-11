@@ -10,16 +10,21 @@
 
 #include <glad/glad.h>
 #include "helper/glslprogram.h"
+#include "helper/torus.h"
+
+
 
 class SceneBasic_Uniform : public Scene
 {
-private:
-    glm::mat4 rotationMatrix;
+//private:
+//    glm::mat4 rotationMatrix;
 
 private:
-    GLuint vaoHandle;
+    Torus torus;
+    
     GLSLProgram prog;
-    float angle;
+    
+    void setMatrices();
 
     void compile();
 

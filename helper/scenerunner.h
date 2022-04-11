@@ -18,7 +18,7 @@ private:
 	bool debug;           // Set true to enable debug messages
 
 public:
-    SceneRunner(const std::string & windowTitle, int width = WIN_WIDTH, int height = WIN_HEIGHT, int samples = 0) : debug(true) {
+    SceneRunner(const std::string & windowTitle, int width = WIN_WIDTH, int height = WIN_HEIGHT, int samples = 0) : debug(true) { //could be a driver issue
         // Initialize GLFW
         if( !glfwInit() ) exit( EXIT_FAILURE );
 
@@ -127,7 +127,7 @@ private:
             glfwPollEvents();
 			int state = glfwGetKey(window, GLFW_KEY_SPACE);
 			if (state == GLFW_PRESS)
-				scene.animate(!scene.animating());
+				scene.animate(!scene.animating()); 
         }
     }
 };
