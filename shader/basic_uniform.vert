@@ -16,7 +16,7 @@ out vec3 LightIntensity;
 uniform struct LightInfo
 {
   vec4 Position;      //light position in eye coordinates
-  vec3 Ld;            //Diffuse light intensity
+  vec3 Ld;            //Diffuse light source intensity
 } Light;
 
 
@@ -39,10 +39,10 @@ void main()
     //transform vertex position from model coordinates to view coordinates
     vec4 pos = ModelViewMatrix * vec4(VertexPosition,1.0);
 
-    //calculate light direction
+    //calculate the light direction
     vec3 s = normalize(vec3(Light.Position - pos));
 
-    //calculating dot product for vector s and n using max
+    //calculating the dot product for vector s and n using max
     float sDotN = max(dot(s,n), 0.0);
 
     //diffuse the formula for light calculations
