@@ -18,7 +18,7 @@ using glm::mat4;
 
 SceneBasic_Uniform::SceneBasic_Uniform() : 
 
-    torus(0.7f, 0.3f, 100,100) {} //less janky looking with high polymesh .7 and .3 keeps it in range of window size
+    torus(0.7f, 0.3f, 50,50) {} //less janky looking with high polymesh .7 and .3 keeps it in range of window size
 
 void SceneBasic_Uniform::initScene()
 {
