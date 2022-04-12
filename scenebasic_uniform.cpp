@@ -16,7 +16,7 @@ using std::endl;
 using glm::vec3;
 using glm::mat4;
 
-SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, 100, 100) {} // construct torus with high polymesh
+SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, 100, 100) {} // construct torus with high polymesh more rings and sides
 
     
 void SceneBasic_Uniform::initScene()
@@ -34,10 +34,10 @@ void SceneBasic_Uniform::initScene()
 
     projection = mat4(1.0f);
 
-    prog.setUniform("Material.Kd", 0.3f, 0.7f, 0.9f);
+    prog.setUniform("Material.Kd", 0.3f, 0.7f, 0.9f); 
     prog.setUniform("Light.Ld", 2.0f, 0.7f, 2.0f);
 
-    prog.setUniform("LightPosition", view * glm::vec4(5.0f, 6.0f, 2.0f, 1.0f));  
+    prog.setUniform("LightPosition", view * glm::vec4(5.0f, 5.0f, 2.0f, 1.0f));  
         
 
 

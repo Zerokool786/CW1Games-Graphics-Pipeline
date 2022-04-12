@@ -33,10 +33,10 @@ uniform mat4 MVP;                   //model view projection matrix
 
 void main()
 {
-    //transform vertex normal from model coordinates to eye coordinates
+    //transform vertex normal from model coordinates to the view coordinates
     vec3 n = normalize( NormalMatrix * VertexNormal);
 
-    //transform vertex position from model coordinates to eye coordinates
+    //transform vertex position from model coordinates to the view coordinates
     vec4 pos = ModelViewMatrix * vec4(VertexPosition,1.0);
 
     //calculate the light direction to the vertex point
@@ -51,6 +51,6 @@ void main()
     //passing color to LightIntensity which then will transfer it to fragment shader
     LightIntensity = diffuse;
 
-    //this turns any vertex postion into MVP 
+    //this turns any vertex postion into MV Projection
     gl_Position = MVP * vec4(VertexPosition,1.0);
 }
