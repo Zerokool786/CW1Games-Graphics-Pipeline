@@ -4,7 +4,7 @@
 //input vars
 
 layout (location = 0) in vec3 VertexPosition;
-layout (location = 1) in vec3 VertexNormal; 
+layout (location = 1) in vec3 VertexNormal;
 
 
 //output vars
@@ -33,13 +33,13 @@ uniform mat4 MVP;                   //model view projection matrix
 
 void main()
 {
-    //transform normal from model coodinates to view coordinates
+    //transform vertex normal from model coordinates to eye coordinates
     vec3 n = normalize( NormalMatrix * VertexNormal);
 
-    //transform vertex position from model coordinates to view coordinates
+    //transform vertex position from model coordinates to eye coordinates
     vec4 pos = ModelViewMatrix * vec4(VertexPosition,1.0);
 
-    //calculate the light direction
+    //calculate the light direction to the vertex point
     vec3 s = normalize(vec3(Light.Position - pos));
 
     //calculating the dot product for vector s and n using max

@@ -16,10 +16,9 @@ using std::endl;
 using glm::vec3;
 using glm::mat4;
 
-SceneBasic_Uniform::SceneBasic_Uniform() : 
+SceneBasic_Uniform::SceneBasic_Uniform() : torus(0.7f, 0.3f, 100, 100) {} // construct torus with high polymesh
 
-    torus(0.7f, 0.3f, 50,50) {} //less janky looking with high polymesh .7 and .3 keeps it in range of window size
-
+    
 void SceneBasic_Uniform::initScene()
 {
     compile();
@@ -28,8 +27,8 @@ void SceneBasic_Uniform::initScene()
     /*Initialise the model matrix using:*/
     model = mat4(1.0f);
 
-    model = glm::rotate(model, glm::radians(-35.0f), vec3(1.0f, 0.0f, 0.0f));
-    model = glm::rotate(model, glm::radians(10.0f), vec3(0.0f, 1.0f, 0.0f));
+    model = glm::rotate(model, glm::radians(-35.0f), vec3(1.0f, 0.0f, 0.0f));  //rotate model around z-axis
+    model = glm::rotate(model, glm::radians(10.0f), vec3(0.0f, 1.0f, 0.0f));   //rotate model around y-axis
     view = glm::lookAt(vec3(0.0f, 0.0f, 2.0f), vec3(0.0f, 0.0f, 0.0f), vec3(0.0f, 1.0f, 0.0f));
         
 
@@ -38,7 +37,7 @@ void SceneBasic_Uniform::initScene()
     prog.setUniform("Material.Kd", 0.3f, 0.7f, 0.9f);
     prog.setUniform("Light.Ld", 2.0f, 0.7f, 2.0f);
 
-    prog.setUniform("LightPosition", view * glm::vec4(7.0f, 6.0f, 2.0f, 1.0f));  
+    prog.setUniform("LightPosition", view * glm::vec4(5.0f, 6.0f, 2.0f, 1.0f));  
         
 
 
@@ -63,7 +62,7 @@ void SceneBasic_Uniform::compile()
 void SceneBasic_Uniform::update(float t)
 {
 
-
+ 
 
 }
 
