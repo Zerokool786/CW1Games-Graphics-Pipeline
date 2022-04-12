@@ -1,4 +1,4 @@
-# CW1COMP3015
+# CW1COMP3015 Initial Prototype
 
  # Which version Visual Studio and Operating System you used to test/write the code locally?
 
