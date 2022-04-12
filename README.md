@@ -1,7 +1,6 @@
 # CW1COMP3015
 
- # Which version Visual Studio and Operating System you used to test/write the code
- locally?
+ # Which version Visual Studio and Operating System you used to test/write the code locally?
 
  I used Visual Studio Community 2019 Version 16.11.11 to write the code running on Windows 10 19044.1620, Version = 21H2
 
