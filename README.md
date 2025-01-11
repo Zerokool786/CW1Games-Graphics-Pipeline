@@ -28,10 +28,6 @@
  - the data of the model torus is passed through basic_uniform.vert and basic_uniform.frag respectively
  - torus object is created in torus.cpp with defined parameters
  
- 
- 
- # Anything else which will help us to understand how your prototype works?
-  I utilized the given project template to build my prototype 
  # Link to Youtube Video
  
  https://youtu.be/ClxSId2BF1A
